@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import Carousel from "react-bootstrap/Carousel"
-import "./styles.scss"
 
 export default class CarouselModule extends Component {
     render() {
