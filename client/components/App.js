@@ -1,10 +1,17 @@
 import React, { Component } from "react"
 import CarouselModule from "./Carousel"
-import { getMedia } from "../api"
 
 export default class App extends Component {
+  getRandomIds = () => {
+    var randomContentIds = []
+    while (randomContentIds.length < 4) {
+      var r = Math.floor(Math.random() * 4) + 1
+      if (randomContentIds.indexOf(r) === -1) randomContentIds.push(r)
+    }
+    return randomContentIds
+  }
+  
   render() {
-    getMedia()
-    return <CarouselModule />
+    return <CarouselModule randomIds={this.getRandomIds()} />
   }
 }
